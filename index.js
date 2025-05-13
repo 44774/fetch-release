@@ -14,7 +14,6 @@ async function fetch_release() {
     const repo = core.getInput("repo");
     const tag = core.getInput("tag");
     const match = core.getInput("match");
-    const version = 'v1.3.13';
 
     const api_url = tag === '' ? `https://api.github.com/repos/${group}/${repo}/releases/${version == '' ? 'latest' : version}`
         : `https://api.github.com/repos/${group}/${repo}/releases/tags/${tag}`;
